@@ -14,16 +14,16 @@ import lombok.Data;
 public class Aprendiz {
     
     @Id
-    @Column
+    @Column (name = "Id cliente")
     private Long iduser;
     
-    @Column
+    @Column (name = "Nombres", nullable=false, length=20)
     private String nomuser;
     
-     @Column
+     @Column(name = "Apellidos", nullable=false, length=25)
     private String apellido;
      
-      @Column
+      @Column (name = "Correo electronico", unique=true, nullable=false)
     private String email;
     
 }
